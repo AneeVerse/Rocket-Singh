@@ -38,7 +38,7 @@ const FloatingActionButton = () => {
           className="flex md:hidden flex-col items-center gap-3 mb-4"
         >
           <motion.a
-            href="https://wa.me/+912929292929"
+            href="https://wa.me/+917021388625"
             className="w-14 h-14 bg-white text-red-600 rounded-full flex items-center justify-center shadow-lg border border-red-600"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const FloatingActionButton = () => {
           </motion.a>
 
           <motion.a
-            href="mailto:contact@rocketsingh.com"
+            href="mailto:rocketsinghentps@gmail.com"
             className="w-14 h-14 bg-white text-red-600 rounded-full flex items-center justify-center shadow-lg border border-red-600"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -58,7 +58,7 @@ const FloatingActionButton = () => {
           </motion.a>
 
           <motion.a
-            href="tel:+912929292929"
+            href="tel:+917021388625"
             className="w-14 h-14 bg-white text-red-600 rounded-full flex items-center justify-center shadow-lg border border-red-600"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -76,7 +76,7 @@ const FloatingActionButton = () => {
           className="fixed inset-0 bg-gray-900 bg-opacity-50 hidden md:flex items-center justify-center z-50"
         >
           <motion.div
-            className="bg-white relative rounded-xl shadow-lg p-8 max-w-xs md:max-w-md w-full text-center"
+            className="bg-white relative rounded-xl shadow-lg p-8 max-w-md md:max-w-lg w-full text-center"
             variants={containerVariants}
           >
             <h2 className="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h2>
@@ -93,16 +93,16 @@ const FloatingActionButton = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="https://wa.me/+912929292929"
+                  href="https://wa.me/+917021388625"
                   className="flex items-center text-red-600 cursor-pointer"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaWhatsapp size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: +91 912929292929</span>
+                  <span className="ml-3 text-lg font-medium text-gray-700">WhatsApp: +91 7021388625</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('+91 912929292929')}
+                  onClick={() => handleCopy('+91 7021388625')}
                   className="text-gray-500 hover:text-red-600 focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >
@@ -115,14 +115,14 @@ const FloatingActionButton = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="mailto:contact@rocketsingh.com"
+                  href="mailto:rocketsinghentps@gmail.com"
                   className="flex items-center text-red-600 cursor-pointer"
                 >
                   <FaEnvelope size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">Email: contact@rocketsingh.com</span>
+                  <span className="ml-3 text-lg font-medium text-gray-700">Email: rocketsinghentps@gmail.com</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('contact@rocketsingh.com')}
+                  onClick={() => handleCopy('rocketsinghentps@gmail.com')}
                   className="text-gray-500 hover:text-red-600 focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >
@@ -135,14 +135,14 @@ const FloatingActionButton = () => {
                 whileHover={{ scale: 1.05 }}
               >
                 <a
-                  href="tel:+912929292929"
+                  href="tel:+917021388625"
                   className="flex items-center text-red-600 cursor-pointer"
                 >
                   <FaPhone size={24} />
-                  <span className="ml-3 text-lg font-medium text-gray-700">Call: +91 9129292929</span>
+                  <span className="ml-3 text-lg font-medium text-gray-700">Call: +91 7021388625</span>
                 </a>
                 <motion.button
-                  onClick={() => handleCopy('+91 9129292929')}
+                  onClick={() => handleCopy('+91 7021388625')}
                   className="text-gray-500 hover:text-red-600 focus:outline-none"
                   whileTap={{ scale: 0.9 }}
                 >

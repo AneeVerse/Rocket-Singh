@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaLinkedin, FaBars, FaTimes, FaHome, FaConciergeBell, FaInfoCircle, FaEnvelope, FaQuestion } from 'react-icons/fa';
+import { FaPassport } from "react-icons/fa6";
 import { VscServerProcess } from "react-icons/vsc";
 import Image from 'next/image';
 
@@ -15,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg">
-      <div className="mx-auto max-w-7xl p-4 flex justify-between items-center">
+      <div className="mx-auto max-w-7xl px-4 h-[90px] flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl flex items-center gap-[6px] font-bold text-red-600">
           <Image 
@@ -28,13 +29,13 @@ const Header = () => {
          <span>Rocket Singh</span></div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8 font-semibold">
+        <nav className="hidden lg:flex gap-8 font-semibold">
           <a href="#process" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
             <VscServerProcess />
             <span>Process</span>
           </a>
           <a href="#service" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
-            <FaConciergeBell />
+            <FaPassport />
             <span>Service</span>
           </a>
           <a href="#about" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
@@ -53,14 +54,14 @@ const Header = () => {
         </nav>
 
         {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden lg:flex space-x-4">
           <FaFacebook className="text-gray-500 hover:text-blue-600" />
           <FaInstagram className="text-gray-500 hover:text-pink-500" />
           <FaLinkedin className="text-gray-500 hover:text-blue-700" />
         </div>
 
         {/* Hamburger Menu Icon for Mobile */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleSidebar}>
             {isOpen ? <FaTimes size={24} className="text-red-600" /> : <FaBars size={24} className="text-red-600" />}
           </button>
@@ -80,24 +81,24 @@ const Header = () => {
 
           {/* Sidebar Navigation */}
           <nav className="flex flex-col space-y-4 font-semibold">
-            <a href="#process" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#process" onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <VscServerProcess />
               <span>Process</span>
             </a>
-            <a href="#service" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
-              <FaConciergeBell />
+            <a href="#service"  onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+              <FaPassport />
               <span>Service</span>
             </a>
-            <a href="#about" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#about"  onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaInfoCircle />
               <span>About</span>
             </a>
-            <a href="#contact" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#contact" onClick={()=>{setIsOpen(false)}}  className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaEnvelope />
               <span>Contact</span>
             </a>
             
-            <a href="#faq" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#faq"  onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaEnvelope />
               <span>FAQ</span>
             </a>

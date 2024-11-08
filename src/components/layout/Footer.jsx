@@ -42,16 +42,16 @@ const Footer = () => {
           <div className="space-y-2">
             <p className="flex items-center space-x-2">
               <FaPhoneAlt className="text-gray-500" />
-              <span className="text-gray-600">+91 1234567890</span>
+              <span className="text-gray-600">+91 7021388625 / +91 8108000188</span>
             </p>
             <p className="flex items-center space-x-2">
               <FaEnvelope className="text-gray-500" />
-              <span className="text-gray-600">info@rocketsingh.com</span>
+              <span className="text-gray-600">rocketsinghentps@gmail.com</span>
             </p>
             <p className="flex items-start space-x-2">
               <FaMapMarkerAlt className="text-gray-500 mt-1" />
               <span className="text-gray-600">
-                123 Street Name, City, State, ZIP
+              Office No - 116, First Floor, Seawoods Corner CHS LTD., Plot No. 19/A, Sec 25, Nerul (E), Navi Mumbai 400706
               </span>
             </p>
           </div>

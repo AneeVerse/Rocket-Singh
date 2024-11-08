@@ -52,15 +52,15 @@ const Contact = () => {
             <div className="flex flex-col gap-6 md:gap-12">
               <p className="flex items-center space-x-2">
                 <FaEnvelope className="text-lg" />
-                <span>aneeverse@gmail.com</span>
+                <span>rocketsinghentps@gmail.com</span>
               </p>
               <p className="flex items-center space-x-2">
                 <FaPhone className="text-lg" />
-                <span>+34 123 456 789</span>
+                <span>+91 7021388625 / +91 8108000188</span>
               </p>
               <p className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-lg" />
-                <span>123 Street 487 House</span>
+                <span>Office No - 116, First Floor, Seawoods Corner CHS LTD., Plot No. 19/A, Sec 25, Nerul (E), Navi Mumbai 400706</span>
               </p>
             </div>
             <div className="flex space-x-4 mt-4 md:mt-6">

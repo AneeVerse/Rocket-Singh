@@ -62,7 +62,7 @@ const Hero = () => {
             <p className="text-sm font-semibold text-gray-700">Projects</p>
           </motion.div>
           <motion.div
-            className="absolute top-20 right-0 transform translate-x-1/4 bg-white rounded-lg shadow-lg p-2 flex items-center space-x-2"
+            className="absolute top-10 -left-0 transform translate-x-1/4 bg-white rounded-lg shadow-lg p-2 flex items-center space-x-2"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
@@ -71,7 +71,7 @@ const Hero = () => {
             <p className="text-sm font-semibold text-gray-700">4.8 Satisfaction</p>
           </motion.div>
           <motion.div
-            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-2 flex items-center space-x-2"
+            className="absolute -bottom-8 lg:-bottom-0 min-w-fit left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-2 flex items-center space-x-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}

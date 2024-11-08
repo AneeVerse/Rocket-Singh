@@ -39,8 +39,8 @@ export default function ProcessSection() {
   return (
     <div id='process' className="flex flex-col items-center bg-gray-50 py-8 px-2 sm:px-8">
       <div className="relative flex flex-col items-center p-8 rounded-lg">
-        <h2 className="text-3xl font-bold mb-8 text-red-700">Application Process</h2>
-        <div className="relative w-full">
+      <h2 className="text-4xl font-bold text-center mb-8">Applications Process</h2>
+        <div className="relative w-full px-3">
           {/* Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-red-300"></div>
           
@@ -48,7 +48,7 @@ export default function ProcessSection() {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className={`flex relative mt-2 items-center w-full mb-2 ${index % 2 === 0 ? 'justify-start -ml-8' : 'justify-end ml-8'}`}
+              className={`flex relative mt-2 items-center w-full mb-12 md:mb-2 ${index % 2 === 0 ? 'justify-start -ml-8' : 'justify-end ml-8'}`}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
@@ -58,7 +58,7 @@ export default function ProcessSection() {
               
               {/* Step Card */}
               <div className="flex items-center justify-center sm:w-1/2">
-                <div className={`flex ${index % 2 === 0 ? "flex-col-reverse" : "flex-col"} sm:flex-row items-center space-x-4 bg-white p-6 rounded-lg shadow-md`}>
+                <div className={`flex ${index % 2 === 0 ? "flex-col-reverse" : "flex-col"} sm:flex-row items-center gap-4 bg-white px-3 py-6 sm:px-6 sm:py-6 rounded-lg shadow-md`}>
                   {index % 2 === 1 && (
                     <div className="text-red-600">{step.icon}</div>
                   )}

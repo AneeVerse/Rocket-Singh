@@ -17,7 +17,7 @@ const AboutUs = () => {
             transition={{ duration: 0.5 }}
           >
             <img
-              src="/images/about-img.webp" // Replace with the actual path to the image
+              src="/images/passport.jpeg" // Replace with the actual path to the image
               alt="About Us"
               className="w-full h-full object-cover rounded-lg shadow-lg lg:max-h-[500px]"
             />
@@ -35,15 +35,15 @@ const AboutUs = () => {
 
             {/* Key Benefits List */}
             <ul className="space-y-4">
-              <li className="flex items-start">
+              <li className="flex text-start items-start">
                 <FaCheckCircle className="text-red-600 mr-3 mt-1" size={20} />
                 <span className="text-gray-700 text-lg">Experienced and dedicated professionals.</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex text-start items-start">
                 <FaCheckCircle className="text-red-600 mr-3 mt-1" size={20} />
                 <span className="text-gray-700 text-lg">Tailored solutions to meet your unique needs.</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex text-start items-start">
                 <FaCheckCircle className="text-red-600 mr-3 mt-1" size={20} />
                 <span className="text-gray-700 text-lg">Seamless processes for a stress-free experience.</span>
               </li>

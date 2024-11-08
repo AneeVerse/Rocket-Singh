@@ -22,7 +22,7 @@ const FAQ = () => {
 
   return (
     <section id='faq' className="bg-gray-50 py-16 px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">FAQ</h2>
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">FAQ</h2>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Here you will find answers to frequently asked questions regarding passport applications, renewals, and more.</p>
       
       <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
