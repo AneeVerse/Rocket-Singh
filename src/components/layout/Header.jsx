@@ -80,21 +80,26 @@ const Header = () => {
 
           {/* Sidebar Navigation */}
           <nav className="flex flex-col space-y-4 font-semibold">
-            <a href="/" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
-              <FaHome />
-              <span>Home</span>
+            <a href="#process" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+              <VscServerProcess />
+              <span>Process</span>
             </a>
-            <a href="/service" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#service" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaConciergeBell />
               <span>Service</span>
             </a>
-            <a href="/about" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#about" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaInfoCircle />
               <span>About</span>
             </a>
-            <a href="/contact" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+            <a href="#contact" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaEnvelope />
               <span>Contact</span>
+            </a>
+            
+            <a href="#faq" className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+              <FaEnvelope />
+              <span>FAQ</span>
             </a>
           </nav>
 

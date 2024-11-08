@@ -56,7 +56,7 @@ const TestimonialSection = () => {
                 <FaStar key={index} className="text-red-500" />
               ))}
           </div>
-          <p className="text-lg font-semibold text-gray-700 mb-4">"{testimonials[current].quote}"</p>
+          <p className="text-lg font-semibold text-gray-700 mb-4">&quot;{testimonials[current].quote}&quot;</p>
           <h4 className="text-md font-bold text-gray-800">{testimonials[current].name}</h4>
           <p className="text-gray-500">{testimonials[current].role}</p>
         </motion.div>
