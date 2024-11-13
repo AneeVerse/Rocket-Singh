@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import Container from "../layout/Container";
 
 const testimonials = [
   {
@@ -52,13 +53,14 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 bg-gray-50 text-center">
+    <section id="testimonials" className="py-16 bg-gray-50 px-3 text-center">
+      <Container>
       <div className="mb-8">
       <h2 className="text-3xl font-bold text-gray-800 mb-2">What our customers say</h2>
       <p className="text-gray-500 mb-8">Thousands of satisfied customers have trusted our services</p>
       </div>
 
-      <div className="elfsight-app-119f63a0-958b-4922-b355-f67329754107" data-elfsight-app-lazy></div>
+      <div className="elfsight-app-119f63a0-958b-4922-b355-f67329754107" data-elfsight-app-lazy></div></Container>
     </section>
   );
 };
