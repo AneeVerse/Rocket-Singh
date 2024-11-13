@@ -26,7 +26,7 @@ const Header = () => {
           alt='Rocket sing logo'
           className='self-center'
           />
-         <span>Rocket Singh</span></div>
+         <span className='text-[18px] sm:text-2xl'>Rocket Singh Enterprises</span></div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-8 font-semibold">
@@ -77,7 +77,7 @@ const Header = () => {
       >
         <div className="flex flex-col p-6 space-y-6">
           {/* Logo inside Sidebar */}
-          <div className="text-2xl font-bold text-red-600">Rocket Singh</div>
+          <div className="text-lg sm:text-2xl font-bold text-red-600">Rocket Singh Enterprises</div>
 
           {/* Sidebar Navigation */}
           <nav className="flex flex-col space-y-4 font-semibold">

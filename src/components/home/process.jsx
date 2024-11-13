@@ -39,7 +39,7 @@ export default function ProcessSection() {
   return (
     <div id='process' className="flex flex-col items-center bg-gray-50 py-8 px-2 sm:px-8">
       <div className="relative flex flex-col items-center p-8 rounded-lg">
-      <h2 className="text-4xl font-bold text-center mb-8">Applications Process</h2>
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">Applications Process</h2>
         <div className="relative w-full px-3">
           {/* Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-red-300"></div>

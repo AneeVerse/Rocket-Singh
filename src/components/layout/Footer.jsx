@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex-1 space-y-4">
           <div className="flex items-center space-x-3">
             <img src="/images/profile.png" alt="Rocket Singh Logo" className="w-12 h-12 rounded-full" />
-            <h2 className="text-xl font-bold text-red-600">Rocket Singh</h2>
+            <h2 className="text-xl font-bold text-red-600">Rocket Singh Enterprises</h2>
           </div>
           <p className="text-gray-700">
             We work hard to provide reliable and fast passport services, catering to all your travel document needs with precision and dedication.
@@ -49,7 +49,7 @@ const Footer = () => {
               <span className="text-gray-600">rocketsinghentps@gmail.com</span>
             </p>
             <p className="flex items-start space-x-2">
-              <FaMapMarkerAlt className="text-gray-500 mt-1" />
+              <FaMapMarkerAlt className="text-gray-500 mt-1 min-w-fit" />
               <span className="text-gray-600">
               Office No - 116, First Floor, Seawoods Corner CHS LTD., Plot No. 19/A, Sec 25, Nerul (E), Navi Mumbai 400706
               </span>
@@ -63,7 +63,7 @@ const Footer = () => {
       <div className="border-t border-gray-300 mt-10 pt-4 text-center text-gray-500 text-sm">
         <div className='mx-auto max-w-7xl flex flex-col md:flex-row justify-center gap-2 px-2 items-center md:justify-between'>
           
-       <div>© {new Date().getFullYear()} Rocket Singh. All Rights Reserved.</div> 
+       <div>© {new Date().getFullYear()} Rocket Singh Enterprises. All Rights Reserved.</div> 
        <Link href={"https://aneeverse.com/en/"} target='_blank' 
        className='cursor-pointer hover:text-red-600 flex items-center gap-2 min-w-fit'> <span>Managed & Designed by Aneeverse</span> 
         <Image src={"/images/aneeverse-logo.png"} alt='aneeverse logo' width={22} height={22}/> </Link>

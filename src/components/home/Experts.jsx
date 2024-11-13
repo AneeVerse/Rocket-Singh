@@ -1,75 +1,114 @@
-'use client'
-import { motion } from 'framer-motion';
-import { useRef } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+'use client';
+import { useState, useEffect, useRef } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const experts = [
-  { name: 'Jerry Wilson', role: 'Public Safety Consultant', img: '/images/jerry-wilson.jpg' },
-  { name: 'Catherine Whitmore', role: 'Senior Sustainability Consultant', img: '/images/catherine-whitmore.jpg' },
-  { name: 'Dorothy Riley', role: 'Energy Analyst', img: '/images/dorothy-riley.jpg' },
-  { name: 'Darren Russell', role: 'Environmental Program Expert', img: '/images/darren-russell.jpg' },
-  { name: 'Elizabeth Simmons', role: 'Passport Expert Officer', img: '/images/elizabeth-simmons.jpg' },
-  { name: 'Darren Russell', role: 'Environmental Program Expert', img: '/images/darren-russell.jpg' },
-  { name: 'Elizabeth Simmons', role: 'Passport Expert Officer', img: '/images/elizabeth-simmons.jpg' },
-  { name: 'Darren Russell', role: 'Environmental Program Expert', img: '/images/darren-russell.jpg' },
-  { name: 'Elizabeth Simmons', role: 'Passport Expert Officer', img: '/images/elizabeth-simmons.jpg' },
+  { name: 'Jerry Wilson', role: 'Public Safety Consultant', img: '/images/team-profile.webp' },
+  { name: 'Catherine Whitmore', role: 'Senior Sustainability Consultant', img: '/images/team-profile.webp' },
+  { name: 'Dorothy Riley', role: 'Energy Analyst', img: '/images/team-profile.webp' },
+  { name: 'Darren Russell', role: 'Environmental Program Expert', img: '/images/team-profile.webp' },
+  { name: 'Elizabeth Simmons', role: 'Passport Expert Officer', img: '/images/team-profile.webp' },
 ];
 
 const Experts = () => {
-  const scrollRef = useRef(null);
+  const [current, setCurrent] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(1);
+  const autoScrollRef = useRef(null);
 
-  const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+  // Calculate number of visible cards based on screen width
+  const updateCardsToShow = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 2000) setCardsToShow(4);
+    else if (screenWidth >= 1200) setCardsToShow(4);
+    else if (screenWidth >= 800) setCardsToShow(3);
+    else if (screenWidth >= 492) setCardsToShow(2);
+    else setCardsToShow(1);
   };
 
-  const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+  useEffect(() => {
+    updateCardsToShow();
+    window.addEventListener("resize", updateCardsToShow);
+    return () => window.removeEventListener("resize", updateCardsToShow);
+  }, []);
+
+  // Auto-scroll handler
+  const handleAutoScroll = () => {
+    setCurrent((prev) =>
+      prev < experts.length - cardsToShow ? prev + 1 : 0
+    );
   };
+
+  // Button click handlers with auto-scroll reset
+  const handleLeft = () => {
+    clearInterval(autoScrollRef.current);
+    setCurrent((prev) => (prev > 0 ? prev - 1 : experts.length - cardsToShow));
+    resetAutoScroll();
+  };
+
+  const handleRight = () => {
+    clearInterval(autoScrollRef.current);
+    setCurrent((prev) => (prev < experts.length - cardsToShow ? prev + 1 : 0));
+    resetAutoScroll();
+  };
+
+  // Reset auto-scroll
+  const resetAutoScroll = () => {
+    clearInterval(autoScrollRef.current);
+    autoScrollRef.current = setInterval(handleAutoScroll, 5000);
+  };
+
+  // Initialize auto-scroll on component mount
+  useEffect(() => {
+    autoScrollRef.current = setInterval(handleAutoScroll, 5000);
+    return () => clearInterval(autoScrollRef.current);
+  }, [cardsToShow]);
 
   return (
-    <section className="bg-gray-50 py-16 px-8">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">Meet our Experts</h2>
-      <p className="text-center text-gray-600 mb-8">
-        Our team boasts top green energy experts, driving innovation in sustainability.
+    <section className="py-16 px-2 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Meet our Experts</h2>
+      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        Our team consists of top professionals dedicated to driving innovation and sustainability in their fields.
       </p>
-      
-      <div className="relative">
-        {/* Scrollable Expert Cards */}
-        <div ref={scrollRef} className="flex overflow-x-scroll gap-6 py-4 px-2 scrollbar-hide">
-          {experts.map((expert, index) => (
-            <motion.div
-              key={index}
-              className="min-w-[240px] flex-shrink-0 flex flex-col items-center bg-white p-4 rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.2 }}
-            >
-              <img
-                src={expert.img}
-                alt={expert.name}
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
-              <div className="w-full p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{expert.name}</h3>
-                <p className="text-gray-600">{expert.role}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+       <div className="relative overflow-hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${current * (100 / cardsToShow)}%)`,
+            }}
+          >
+            {experts.map((expert, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-lg flex-shrink-0 mx-3 my-4 overflow-hidden"
+                style={{
+                  flex: `0 0 calc((100% - ${cardsToShow * 20}px) / ${cardsToShow})`,
+                }}
+              >
+                <img
+                  src={expert.img}
+                  alt={expert.name}
+                  className="w-full h-[250px] object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-800">{expert.name}</h3>
+                  <p className="text-gray-600 mt-1">{expert.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={scrollLeft}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
-        >
-          <FaArrowLeft size={20} />
-        </button>
-        <button
-          onClick={scrollRight}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg text-gray-800 hover:bg-gray-100 focus:outline-none"
-        >
-          <FaArrowRight size={20} />
-        </button>
+          {/* Navigation Buttons */}
+          <FaAngleLeft
+            className="text-red-600 absolute top-1/2 translate-y-[-50%] left-4 z-40 cursor-pointer border border-red-600 bg-white hover:bg-red-600 hover:text-white w-10 h-10 p-2 rounded-full transition-all"
+            onClick={handleLeft}
+          />
+          <FaAngleRight
+            className="text-red-600 absolute top-1/2 translate-y-[-50%]  right-4 z-40 cursor-pointer border border-red-600 bg-white hover:bg-red-600 hover:text-white w-10 h-10 p-2 rounded-full transition-all"
+            onClick={handleRight}
+          />
+        </div>
       </div>
     </section>
   );

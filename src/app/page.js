@@ -6,16 +6,18 @@ import Testimonials from '@/components/home/Testimonials';
 import FAQ from '@/components/home/FAQ';
 import Contact from '@/components/home/Contact';
 import AboutUs from '@/components/home/AboutUs';
+import TrustedBy from '@/components/home/TrustedBy';
 
 
 export default function Home() {
   return (
     <div className="">
       <Hero />
+      <TrustedBy/>
       <AboutUs/>
       <Service />
       <Process/>
-      {/* <Experts/> */}
+      <Experts/>
       <Testimonials/>
       <FAQ/>
       <Contact/>
