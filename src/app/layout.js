@@ -2,9 +2,6 @@
 
 import { Poppins } from "next/font/google"; // Import Poppins from Google Fonts
 import "./globals.css"; // Global CSS (ensure font-family settings if needed)
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import FloatingActionButton from "@/components/layout/FloatingActionButton";
 
 // Configure Poppins font
 const poppins = Poppins({
@@ -23,10 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} font-sans`}>
-        <Header />
         {children}
-        <Footer />
-        <FloatingActionButton />
       </body>
     </html>
   );
