@@ -1,11 +1,12 @@
 // components/Loader.js
 import { motion } from "framer-motion";
+import { FaPlaneDeparture, FaPlaneArrival } from "react-icons/fa";
 import { IoAirplane } from "react-icons/io5";
 
 const Loader = ({ onComplete }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-transparent z-50">
-      <div className="relative  h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         {/* Left Door */}
         <motion.div
           className="bg-red-600 h-full w-1/2 absolute left-0"

@@ -40,7 +40,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <FloatingActionButton />
- {loading && <Loader/> }
+{loading && <Loader/> } 
     </div></>
   );
 }
