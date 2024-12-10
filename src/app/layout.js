@@ -13,7 +13,16 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Rocket Singh",
-  description: "Your description here",
+  description: "Rocket Singh is a visa and passport service provider",
+  icons: {
+    icon: "/favicon.ico", // Default favicon
+    apple: "/apple-touch-icon.png", // Apple touch icon
+    other: [
+      { rel: "icon", type: "image/png", sizes: "192x192", url: "/android-chrome-192x192.png" },
+      { rel: "icon", type: "image/png", sizes: "512x512", url: "/android-chrome-512x512.png" },
+    ],
+  },
+  manifest: "/site.webmanifest", // Optional: Link to your manifest.json file
 };
 
 export default function RootLayout({ children }) {
