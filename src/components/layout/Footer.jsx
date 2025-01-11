@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="space-y-2">
             <p className="flex items-center space-x-2">
               <FaPhoneAlt className="text-gray-500" />
-              <span className="text-gray-600">+91 7021388625 / +91 8108000188</span>
+              <span className="text-gray-600">+91 7021388625 / +91 8108000188 </span>
             </p>
             <p className="flex items-center space-x-2">
               <FaEnvelope className="text-gray-500" />
