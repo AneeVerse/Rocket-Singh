@@ -64,7 +64,7 @@ const Footer = () => {
         <div className='mx-auto max-w-7xl flex flex-col md:flex-row justify-center gap-2 px-2 items-center md:justify-between'>
           
        <div>© {new Date().getFullYear()} Rocket Singh Enterprises. All Rights Reserved.</div> 
-       <Link href={"https://aneeverse.com/en/"} target='_blank' 
+       <Link href={"https://www.aneeverse.com/"} target='_blank' 
        className='cursor-pointer hover:text-red-600 flex items-center gap-2 min-w-fit'> <span>Managed & Designed by Aneeverse</span> 
         <Image src={"/images/aneeverse-logo.png"} alt='aneeverse logo' width={22} height={22}/> </Link>
       </div>
