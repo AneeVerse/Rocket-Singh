@@ -538,20 +538,20 @@ export default function FastTrack() {
 
       <Container>
       {/* Support */}
-      <section className="py-20 -mt-20">
-        <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-3xl shadow-2xl p-12 text-center relative overflow-hidden">
+      <section className="py-12 -mt-20">
+        <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-3xl shadow-2xl p-8 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-400/20 to-red-800/20"></div>
           <div className="relative z-10">
-            <div className="w-24 h-24 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-8">
-              <FaEnvelope className="text-white text-4xl" />
+            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <FaEnvelope className="text-white text-2xl" />
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">Need Help?</h2>
-            <p className="text-2xl text-red-100 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-3">Need Help?</h2>
+            <p className="text-lg text-red-100 mb-6 max-w-2xl mx-auto">
               Our support team is here to assist you with the Trusted Traveller Program
             </p>
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto">
-              <h3 className="text-xl font-bold text-white mb-2">Contact Support</h3>
-              <a href="mailto:rocketsinghentps@gmail.com" className="text-red-200 hover:text-white font-bold text-lg transition-colors">
+            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 max-w-md mx-auto">
+              <h3 className="text-lg font-bold text-white mb-2">Contact Support</h3>
+              <a href="mailto:rocketsinghentps@gmail.com" className="text-red-200 hover:text-white font-bold text-base transition-colors">
                 rocketsinghentps@gmail.com
               </a>
           </div>
