@@ -2,6 +2,7 @@
 import Container from './../layout/Container';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const AboutUs = () => {
@@ -16,9 +17,11 @@ const AboutUs = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img
-              src="/images/passport.jpeg" // Replace with the actual path to the image
+            <Image
+              src="/images/about2.jpg" // Replace with the actual path to the image
               alt="About Us"
+              width={500}
+              height={500}
               className="w-full h-full object-cover rounded-lg shadow-lg lg:max-h-full"
             />
           </motion.div>

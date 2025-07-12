@@ -8,9 +8,7 @@ import FAQ from '@/components/home/FAQ';
 import Contact from '@/components/home/Contact';
 import AboutUs from '@/components/home/AboutUs';
 import TrustedBy from '@/components/home/TrustedBy';
-import Footer from '@/components/layout/Footer';
 import FloatingActionButton from '@/components/layout/FloatingActionButton';
-import Header from '@/components/layout/Header';
 import { useEffect, useState } from 'react';
 import Loader from '@/components/layout/loader';
 
@@ -28,7 +26,6 @@ export default function Home() {
   return (
     <>
      <div className="">
-      <Header />
       <Hero />
       <TrustedBy />
       <AboutUs />
@@ -38,7 +35,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Contact />
-      <Footer />
       <FloatingActionButton />
 {loading && <Loader/> } 
     </div></>

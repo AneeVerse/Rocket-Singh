@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebook, FaInstagram, FaLinkedin, FaBars, FaTimes, FaHome, FaConciergeBell, FaInfoCircle, FaEnvelope, FaQuestion } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaBars, FaTimes, FaHome, FaGlobe, FaInfoCircle, FaEnvelope, FaQuestion } from 'react-icons/fa';
 import { FaPassport } from "react-icons/fa6";
 import { VscServerProcess } from "react-icons/vsc";
 import Image from 'next/image';
+import Link from 'next/link';
 
-const Header = () => {
+const Header = ({ transparent }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -15,10 +16,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-lg">
-      <div className="mx-auto max-w-7xl px-4 h-[90px] flex justify-between items-center">
+    <header className={`${transparent ? 'bg-transparent' : 'bg-white shadow-lg'} ${transparent ? '' : 'shadow-lg'}`}>
+      <div className={`${transparent ? 'w-full h-[90px] flex justify-between items-center' : 'mx-auto max-w-7xl px-4 h-[90px] flex justify-between items-center'}`}>
         {/* Logo */}
-        <div className="text-2xl flex items-center gap-[6px] font-bold text-red-600">
+        <Link href="/" className="text-2xl flex items-center gap-[6px] font-bold text-red-600 hover:opacity-80 transition-opacity">
           <Image 
            src={"/images/profile.png"}
           width={40}
@@ -26,7 +27,8 @@ const Header = () => {
           alt='Rocket sing logo'
           className='self-center'
           />
-         <span className='text-[18px] sm:text-2xl'>Rocket Singh Enterprises</span></div>
+         <span className='text-[18px] sm:text-2xl'>Rocket Singh Enterprises</span>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-8 font-semibold">
@@ -37,6 +39,10 @@ const Header = () => {
           <a href="#service" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
             <FaPassport />
             <span>Service</span>
+          </a>
+          <a href="/fasttrack" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
+            <FaGlobe />
+            <span>Fast Track</span>
           </a>
           <a href="#about" className="text-gray-700 hover:text-red-600 flex items-center space-x-2">
             <FaInfoCircle />
@@ -77,7 +83,9 @@ const Header = () => {
       >
         <div className="flex flex-col p-6 space-y-6">
           {/* Logo inside Sidebar */}
-          <div className="text-lg sm:text-2xl font-bold text-red-600">Rocket Singh Enterprises</div>
+          <Link href="/" className="text-lg sm:text-2xl font-bold text-red-600 hover:opacity-80 transition-opacity" onClick={()=>{setIsOpen(false)}}>
+            Rocket Singh Enterprises
+          </Link>
 
           {/* Sidebar Navigation */}
           <nav className="flex flex-col space-y-4 font-semibold">
@@ -88,6 +96,10 @@ const Header = () => {
             <a href="#service"  onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaPassport />
               <span>Service</span>
+            </a>
+            <a href="/fasttrack" onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
+              <FaGlobe />
+              <span>Fast Track</span>
             </a>
             <a href="#about"  onClick={()=>{setIsOpen(false)}} className="flex items-center text-gray-700 hover:text-red-600 space-x-2">
               <FaInfoCircle />

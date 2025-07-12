@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="flex-1 space-y-4">
           <div className="flex items-center space-x-3">
-            <img src="/images/profile.png" alt="Rocket Singh Logo" className="w-12 h-12 rounded-full" />
+            <Image src="/images/profile.png" alt="Rocket Singh Logo" width={48} height={48} className="w-12 h-12 rounded-full" />
             <h2 className="text-xl font-bold text-red-600">Rocket Singh Enterprises</h2>
           </div>
           <p className="text-gray-700">
@@ -30,6 +30,7 @@ const Footer = () => {
           <nav className="space-y-2">
             <a href="#about" className="block text-gray-600 hover:text-red-500">About Us</a>
             <a href="#service" className="block text-gray-600 hover:text-red-500">Services</a>
+            <a href="/fasttrack" className="block text-gray-600 hover:text-red-500">Fast Track</a>
             <a href="#contact" className="block text-gray-600 hover:text-red-500">Contact Us</a>
             <a href="#faq" className="block text-gray-600 hover:text-red-500">FAQ</a>
           </nav>

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaTasks, FaStar, FaUserTie } from 'react-icons/fa';
+import { FaTasks, FaStar, FaUserTie, FaPlane } from 'react-icons/fa';
 
 const services = [
   {
@@ -17,6 +17,11 @@ const services = [
   {
     title: 'Lost Passport',
     description: 'Replace a lost or stolen passport quickly.',
+    icon: <FaTasks size={24} />,
+  },
+  {
+    title: 'Fast Track Immigration',
+    description: 'Skip the queues with exclusive TTP service.',
     icon: <FaTasks size={24} />,
   },
 ];
@@ -91,7 +96,7 @@ const Hero = () => {
 
       <div className=" mt-16 lg:mt-2 max-w-full lg:max-w-[60%] text-start">
         <h2 className="text-[28px] font-semibold text-gray-700 mb-4">Our Service</h2>
-        <Link href={"#service"} className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
+        <Link href={"#service"} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}

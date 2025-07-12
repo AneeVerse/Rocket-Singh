@@ -1,7 +1,8 @@
 'use client';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const experts = [
   { name: 'Jerry Wilson', role: 'Public Safety Consultant', img: '/images/team-profile.webp' },
@@ -33,11 +34,11 @@ const Experts = () => {
   }, []);
 
   // Auto-scroll handler
-  const handleAutoScroll = () => {
+  const handleAutoScroll = useCallback(() => {
     setCurrent((prev) =>
       prev < experts.length - cardsToShow ? prev + 1 : 0
     );
-  };
+  }, [cardsToShow]);
 
   // Button click handlers with auto-scroll reset
   const handleLeft = () => {
@@ -62,7 +63,7 @@ const Experts = () => {
   useEffect(() => {
     autoScrollRef.current = setInterval(handleAutoScroll, 5000);
     return () => clearInterval(autoScrollRef.current);
-  }, [cardsToShow]);
+  }, [cardsToShow, handleAutoScroll]);
 
   return (
     <section className="py-16 px-2 bg-gray-50">
@@ -86,9 +87,11 @@ const Experts = () => {
                   flex: `0 0 calc((100% - ${cardsToShow * 20}px) / ${cardsToShow})`,
                 }}
               >
-                <img
+                <Image
                   src={expert.img}
                   alt={expert.name}
+                  width={300}
+                  height={250}
                   className="w-full h-[250px] object-cover"
                 />
                 <div className="p-4">

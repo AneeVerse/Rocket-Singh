@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaPassport, FaSync, FaWrench, FaLock, FaUserShield, FaGlobe, FaCheckCircle } from "react-icons/fa";
+import { FaPassport, FaSync, FaWrench, FaLock, FaUserShield, FaGlobe, FaCheckCircle, FaPlane } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Container from "../layout/Container";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,6 +15,11 @@ const services = [
     title: "Tatkal Passport",
     description: "For urgent passport needs, our Tatkal Passport service offers quick processing and fast delivery.",
     icon: <FaSync size={40} className="text-red-600" />,
+  },
+  {
+    title: "Fast Track Immigration",
+    description: "Experience seamless immigration clearance with our exclusive Trusted Traveller Program (FTI-TTP) for pre-verified passengers.",
+    icon: <FaPlane size={40} className="text-red-600" />,
   },
   {
     title: "Passport Renewal",
