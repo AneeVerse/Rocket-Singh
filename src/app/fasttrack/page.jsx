@@ -88,14 +88,14 @@ export default function FastTrack() {
   return (
     <div className="font-sans">
       {/* Hero Section (full width, no Container) */}
-      <section className="bg-gradient-to-r relative from-white to-red-50 py-16 lg:py-24 px-4 sm:px-6 lg:px-8 mb-16 w-full overflow-hidden">
+      <section className="bg-gradient-to-r relative from-white to-red-50 py-24 lg:py-32 px-4 sm:px-6 lg:px-8 mb-8 w-full overflow-hidden min-h-[80vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/fast/fast.jpg"
             alt="Travelers at airport with luggage"
             fill
-            className="object-cover opacity-90"
+            className="object-cover opacity-0"
             priority
           />
           {/* Subtle gradient overlay for better text contrast */}
@@ -108,18 +108,18 @@ export default function FastTrack() {
         
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 lg:space-x-12">
+          <div className="flex items-center justify-center">
             
-            {/* Left Content Section */}
-            <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
+            {/* Main Content Section - Centered */}
+            <div className="max-w-4xl mx-auto space-y-6 text-center">
               {/* Icon */}
-              <div className="flex items-center justify-center lg:justify-start mb-6">
+              <div className="flex items-center justify-center mb-6">
                 <div className="relative">
                   <span className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100/90 backdrop-blur-sm shadow-xl relative">
-            <FaGlobe className="text-red-600 text-4xl" />
-            <FaPlaneDeparture className="text-red-500 text-xl absolute top-3 right-3 rotate-12" />
-          </span>
-        </div>
+                    <FaGlobe className="text-red-600 text-4xl" />
+                    <FaPlaneDeparture className="text-red-500 text-xl absolute top-3 right-3 rotate-12" />
+                  </span>
+                </div>
               </div>
               
               {/* Main heading matching your theme */}
@@ -141,7 +141,7 @@ export default function FastTrack() {
               </p>
               
               {/* Call to action buttons matching your theme */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center ">
                 <motion.a
                   className="bg-red-600 text-white py-3 px-8 rounded-full font-semibold inline-block hover:bg-red-700 transition-all duration-300 text-center"
                   href="#register"
@@ -151,7 +151,7 @@ export default function FastTrack() {
                   Register Now
                 </motion.a>
                 <motion.a
-                  className="bg-white text-red-600 py-3 px-8 rounded-full font-semibold inline-block border-2 border-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 text-center"
+                  className="bg-white text-red-600 py-3 px-8 rounded-full font-semibold inline-block border-2 border-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 text-center "
                   href="#learn-more"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -160,35 +160,157 @@ export default function FastTrack() {
                 </motion.a>
               </div>
             </div>
-
-            {/* Right Content Section */}
-            <div className="lg:w-1/2">
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-red-100">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                  Program Overview
-                </h3>
-                <p className="text-gray-700 leading-relaxed text-center mb-6">
-                  <span className="font-bold text-red-600">The Fast Track Immigration – Trusted Traveller Program (FTI-TTP)</span> is a government-led initiative designed to expedite immigration clearance for eligible travelers.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <FaCheckCircle className="text-red-600 text-xl flex-shrink-0" />
-                    <span className="text-gray-700">Available for Indian nationals and OCI cardholders</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <FaCheckCircle className="text-red-600 text-xl flex-shrink-0" />
-                    <span className="text-gray-700">Faster, smoother travel experience</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <FaCheckCircle className="text-red-600 text-xl flex-shrink-0" />
-                    <span className="text-gray-700">Secure process for pre-verified passengers</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* Program Overview Section - New dedicated section */}
+      <section className="py-20 -mt-8 relative overflow-hidden">
+        <Container>
+          {/* Background decorative elements */}
+          <div className="absolute top-0 left-0 w-72 h-72 bg-red-50/40 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-100/30 rounded-full blur-3xl"></div>
+          
+          <div className="relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6">
+                <span className="text-red-600">Program</span> Overview
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Learn everything about India's revolutionary Fast Track Immigration initiative
+              </p>
+            </div>
+
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                {/* Left Content */}
+                <motion.div 
+                  className="h-full"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-red-100/50 relative overflow-hidden h-full flex flex-col">
+                    {/* Top accent bar */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 via-red-600 to-red-500"></div>
+                    
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
+                        <FaGlobe className="text-white text-2xl" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-gray-800">About FTI-TTP</h3>
+                    </div>
+                    
+                    <p className="text-gray-700 leading-relaxed text-lg mb-6 flex-grow">
+                      <span className="font-bold text-red-600">The Fast Track Immigration – Trusted Traveller Program (FTI-TTP)</span> is a groundbreaking government-led initiative designed to expedite immigration clearance for eligible travelers, making your journey smoother and faster.
+                      
+                    </p>
+                    
+                    <div className="bg-red-50/50 rounded-2xl p-6 mt-auto">
+                      <div className="flex items-center gap-3 mb-3">
+                        <FaCheckCircle className="text-red-600 text-xl" />
+                        <span className="font-semibold text-gray-800">Government Initiative</span>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed">
+                        Officially launched in partnership with the Ministry of Home Affairs and Delhi International Airport Limited (DIAL), this program represents a collaborative effort between government agencies and aviation authorities to enhance India's position as a global aviation hub.
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Right Content - Key Features */}
+                <motion.div 
+                  className="space-y-6 h-full"
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <div className="bg-gradient-to-br from-red-500 to-red-600 rounded-3xl shadow-2xl p-8 text-white relative overflow-hidden flex-grow">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+                    <div className="relative z-10">
+                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                        <FaBolt className="text-white text-2xl" />
+                        Key Features
+                      </h3>
+                      
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <FaCheckCircle className="text-white text-xl" />
+                          </div>
+                          <div className="flex-1">
+                            <span className="font-semibold text-white block">Available for Indian nationals</span>
+                            <span className="text-red-100 text-sm">and OCI cardholders</span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <FaTachometerAlt className="text-white text-xl" />
+                          </div>
+                          <div className="flex-1">
+                            <span className="font-semibold text-white block">Faster, smoother experience</span>
+                            <span className="text-red-100 text-sm">Skip traditional queues</span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-start gap-4 p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <FaShieldAlt className="text-white text-xl" />
+                          </div>
+                          <div className="flex-1">
+                            <span className="font-semibold text-white block">Secure process</span>
+                            <span className="text-red-100 text-sm">Pre-verified passengers only</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stats Card */}
+                  <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-6 border border-red-100/50">
+                    <div className="text-center">
+                      <div className="flex justify-center items-center gap-8">
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-red-600">5</div>
+                          <div className="text-sm text-gray-600 font-medium">Years Validity</div>
+                        </div>
+                        <div className="w-px h-12 bg-red-200"></div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-red-600">FREE</div>
+                          <div className="text-sm text-gray-600 font-medium">Service Cost</div>
+                        </div>
+                        <div className="w-px h-12 bg-red-200"></div>
+                        <div className="text-center">
+                          <div className="text-3xl font-bold text-red-600">24/7</div>
+                          <div className="text-sm text-gray-600 font-medium">Availability</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Bottom CTA */}
+              <motion.div 
+                className="text-center mt-16"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div className="inline-flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl px-8 py-4 shadow-lg border border-red-100/50">
+                  <FaHandHolding className="text-red-600 text-2xl" />
+                  <span className="text-lg font-semibold text-gray-800">
+                    Ready to experience the future of travel? Register today!
+                  </span>
+                  <FaArrowRight className="text-red-600 text-xl" />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <Container>
       {/* Who Can Use & How It Works */}
       <section className="py-16 -mt-8">
