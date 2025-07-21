@@ -21,8 +21,8 @@ const stepsToRegister = [
   {
     step: "Step 1",
     desc: "Apply through the government. website - ",
-    link: "https://www.ftittp.mha.gov",
-    linkText: "www.ftittp.mha.gov",
+    link: "https://ftittp.mha.gov.in/fti/",
+    linkText: "https://ftittp.mha.gov.in/fti/",
     after: " & fill in the required details."
   },
   {
@@ -31,7 +31,7 @@ const stepsToRegister = [
   },
   {
     step: "Step 3",
-    desc: "Proceed for the biometric enrolment at the Foreigners Regional Registration Office (FRRO) or a dedicated counter at Delhi Airport."
+    desc: "Proceed for biometric enrolment at any all India airport's dedicated counter or FRRO.",
   },
   {
     step: "Step 4",
@@ -47,24 +47,24 @@ const fastTrackSteps = [
 
 const faqs = [
   {
-    question: "Is the Trusted Traveller Program available on all terminals of Delhi Airport?",
-    answer: "The service is currently available at Terminal 3 of Delhi Airport only. Other terminals do not have this facility at present.",
+    question: "Is the Trusted Traveller Program available at all terminals of all India airports and FFRO?",
+    answer: "The service is currently available at select terminals of all India airports. Availability may vary by airport.",
   },
   {
     question: "Will the Trusted Traveller Program be available at other airports in India?",
-    answer: "Currently, the Trusted Traveller Program is available only at Delhi Airport (Terminal 3). Expansion to other airports in India may be considered in the future by the authorities.",
+    answer: "Currently, the Trusted Traveller Program is available at select all India airports. Expansion to more airports in India may be considered in the future by the authorities.",
   },
   {
     question: "How many Indian airports will feature the Trusted Traveller Program?",
-    answer: "As of now, only Delhi Airport features the Trusted Traveller Program. Updates regarding inclusion of other airports will be announced by the government.",
+    answer: "As of now, select all India airports feature the Trusted Traveller Program. Updates regarding inclusion of other airports will be announced by the government.",
   },
   {
     question: "How can I register for the Trusted Traveller Program?",
-    answer: "You can register online by visiting the official website (www.ftittp.mha.gov) and filling in the required details. After verification, you will be notified to proceed for biometric enrolment at the FRRO or a dedicated counter at Delhi Airport.",
+    answer: "You can register online by visiting the official website (www.ftittp.mha.gov) and filling in the required details. After verification, you will be notified to proceed for biometric enrolment at the FRRO or a dedicated counter at any all India airport.",
   },
   {
     question: "Is it only applicable to passengers travelling outside India?",
-    answer: "Yes, the Trusted Traveller Program is primarily designed for international departing and arriving passengers at Delhi Airport.",
+    answer: "Yes, the Trusted Traveller Program is primarily designed for international departing and arriving passengers at all India airports.",
   },
   {
     question: "What are the charges for the Trusted Traveller Program?",
@@ -79,8 +79,8 @@ const faqs = [
     answer: "Your passport must be valid for at least six months at the time of application for the Trusted Traveller Program.",
   },
   {
-    question: "How many e-gates are dedicated to the Trusted Traveller Programme at Delhi Airport?",
-    answer: "There are multiple dedicated e-gates for the Trusted Traveller Program at Terminal 3 of Delhi Airport, ensuring a smooth and fast immigration process.",
+    question: "How many e-gates are dedicated to the Trusted Traveller Programme at all India airports and FFRO?",
+    answer: "There are multiple dedicated e-gates for the Trusted Traveller Program at select terminals of all India airports, ensuring a smooth and fast immigration process.",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function FastTrack() {
               
               {/* Subtitle */}
               <p className="text-lg lg:text-xl text-gray-600 font-medium leading-relaxed">
-                Skip the queues, save time and enjoy seamless immigration clearance at Delhi Airport
+                Skip the queues, save time and enjoy seamless immigration clearance at all India airports and FFRO.
               </p>
               
               {/* Call to action buttons matching your theme */}
@@ -177,7 +177,7 @@ export default function FastTrack() {
                 <span className="text-red-600">Program</span> Overview
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Learn everything about India's revolutionary Fast Track Immigration initiative
+                Learn everything about India&apos;s revolutionary Fast Track Immigration initiative
               </p>
             </div>
 
@@ -212,7 +212,7 @@ export default function FastTrack() {
                         <span className="font-semibold text-gray-800">Government Initiative</span>
                       </div>
                       <p className="text-gray-600 leading-relaxed">
-                        Officially launched in partnership with the Ministry of Home Affairs and Delhi International Airport Limited (DIAL), this program represents a collaborative effort between government agencies and aviation authorities to enhance India's position as a global aviation hub.
+                        Officially launched in partnership with the Ministry of Home Affairs and major Indian airports, this program represents a collaborative effort between government agencies and aviation authorities to enhance India&apos;s position as a global aviation hub.
                       </p>
                     </div>
                   </div>
@@ -442,7 +442,7 @@ export default function FastTrack() {
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">A First-of-its-Kind Initiative</h3>
               <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
-                Delhi Airport (DIAL) is the first in India to introduce the Fast Track Immigration – Trusted Traveller Program in partnership with the Government of India.
+                All India airports are introducing the Fast Track Immigration – Trusted Traveller Program in partnership with the Government of India.
               </p>
             </div>
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-white/10 rounded-full"></div>
