@@ -9,12 +9,14 @@ import Contact from '@/components/home/Contact';
 import AboutUs from '@/components/home/AboutUs';
 import TrustedBy from '@/components/home/TrustedBy';
 import FloatingActionButton from '@/components/layout/FloatingActionButton';
+import PopupContactForm from "@/components/home/PopupContactForm";
 import { useEffect, useState } from 'react';
 import Loader from '@/components/layout/loader';
 
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,8 +25,14 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      <PopupContactForm show={showPopup} onClose={() => setShowPopup(false)} />
      <div className="">
       <Hero />
       <TrustedBy />

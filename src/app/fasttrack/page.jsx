@@ -6,7 +6,8 @@ import { FaCheckCircle, FaUserCheck, FaGlobeAsia, FaArrowRight, FaQuestionCircle
 import { FaRoute } from "react-icons/fa6";
 import { FaIdCard, FaRegSmileBeam } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import PopupContactForm from "@/components/home/PopupContactForm";
 
 const benefits = [
   { label: "Automated Process", icon: <FaCogs className="text-white text-3xl" /> },
@@ -85,8 +86,15 @@ const faqs = [
 ];
 
 export default function FastTrack() {
+  const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPopup(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
-    <div className="font-sans">
+    <>
+      <PopupContactForm show={showPopup} onClose={() => setShowPopup(false)} />
+      <div className="font-sans">
       {/* Hero Section (full width, no Container) */}
       <section className="bg-gradient-to-r relative from-white to-red-50 py-24 lg:py-32 px-4 sm:px-6 lg:px-8 mb-8 w-full overflow-hidden min-h-[80vh]">
         {/* Background Image */}
@@ -688,6 +696,7 @@ export default function FastTrack() {
       <Contact />
       
     </div>
+    </>
   );
 }
 
