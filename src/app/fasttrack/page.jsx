@@ -152,7 +152,7 @@ export default function FastTrack() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center ">
                 <motion.a
                   className="bg-red-600 text-white py-3 px-8 rounded-full font-semibold inline-block hover:bg-red-700 transition-all duration-300 text-center"
-                  href="#register"
+                  href="#contact-form"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -160,7 +160,7 @@ export default function FastTrack() {
                 </motion.a>
                 <motion.a
                   className="bg-white text-red-600 py-3 px-8 rounded-full font-semibold inline-block border-2 border-red-600 hover:bg-red-600 hover:text-white transition-all duration-300 text-center "
-                  href="#learn-more"
+                  href="#contact-form"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -693,7 +693,9 @@ export default function FastTrack() {
       </Container>
       {/* Contact Section */}
       
-      <Contact />
+      <div id="contact-form">
+        <Contact />
+      </div>
       
     </div>
     </>
