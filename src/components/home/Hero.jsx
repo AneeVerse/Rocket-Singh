@@ -39,10 +39,10 @@ const Hero = () => {
         <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
           <p className="text-lg font-medium text-gray-500">Hi, there!</p>
           <h1 className="text-4xl lg:text-6xl font-extrabold text-gray-800">
-            <span className="text-red-600">ROCKET</span> IS HERE TO BE YOUR ASSISTANCE
+            <span className="text-red-600">ROCKET SINGH</span> ENTERPRISES YOUR RELIABLE PASSPORT ASSISTANCE TEAM
           </h1>
           <p className="text-gray-600 mt-2">
-            We work hard for fast and reliable service.
+           Urgent Tatkaal Passport Services – Fast, Reliable & Trusted Assistance
           </p>
           <motion.a
             className="mt-6 bg-red-600 text-white py-3 px-8 rounded-full font-semibold inline-block hover:bg-red-700"

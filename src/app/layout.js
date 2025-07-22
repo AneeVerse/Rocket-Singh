@@ -14,8 +14,16 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Rocket Singh Passport Consultancy",
+  title: "Expert Tatkaal passport processing and visa assistance in Navi Mumbai. Get your passport in 1–3 days. Verified reviews.",
   description: "Rocket Singh Passport Consultancy - Professional visa and passport services including Fresh Passport, Tatkal Passport, Lost Passport, and Fast Track Immigration services",
+  keywords: [
+    "Tatkaal passport service Navi Mumbai",
+    "urgent passport renewal Mumbai",
+    "lost passport assistance Navi Mumbai",
+    "Tatkaal passport eligibility documents",
+    "how long does Tatkaal passport take",
+    "normal vs Tatkaal passport timeline India"
+  ],
   icons: {
     icon: "/favicon.ico", // Default favicon
     apple: "/apple-touch-icon.png", // Apple touch icon

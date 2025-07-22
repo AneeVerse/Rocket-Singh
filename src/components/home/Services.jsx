@@ -7,13 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
   {
-    title: "Fresh Passport",
-    description: "Get your new passport with minimal documentation and efficient processing for first-time applicants.",
+    title: "Fresh Passport in Mumbai",
+    description: "Secure your first passport with hassle-free documentation and efficient processing. Ideal for first-time applicants across Mumbai, including Nerul, Seawoods, Andheri, and more.",
     icon: <FaPassport size={40} className="text-red-600" />,
   },
   {
-    title: "Tatkal Passport",
-    description: "For urgent passport needs, our Tatkal Passport service offers quick processing and fast delivery.",
+    title: "Tatkaal Passport Service Mumbai",
+    description: "For urgent passport needs, our Tatkaal passport service in Mumbai guarantees fast-track application processing and delivery within 1–3 working days. Trusted by hundreds of Mumbai residents.",
     icon: <FaSync size={40} className="text-red-600" />,
   },
   {
@@ -22,28 +22,28 @@ const services = [
     icon: <FaPlane size={40} className="text-red-600" />,
   },
   {
-    title: "Passport Renewal",
-    description: "Renew your expired passport seamlessly with quick updates and minimal paperwork.",
+    title: "Passport Renewal Mumbai",
+    description: "Renew your expired or expiring passport quickly with our expert guidance. We simplify the renewal process with minimal paperwork and fast service in Mumbai.",
     icon: <FaWrench size={40} className="text-red-600" />,
   },
   {
-    title: "Lost Passport",
-    description: "Get assistance to replace a lost passport quickly with help filing reports and expedited processing.",
+    title: "Lost or Stolen Passport Assistance Mumbai",
+    description: "If your passport is lost or stolen, get expert help filing FIRs, documenting cases, and expediting your replacement passport in Mumbai.",
     icon: <FaLock size={40} className="text-red-600" />,
   },
   {
-    title: "Damaged Passport",
-    description: "Replace a damaged passport efficiently, with all the necessary documentation support.",
+    title: "Damaged Passport Replacement",
+    description: "Replace damaged passports with ease. Our Mumbai-based team ensures all documentation is in order for quick reissuance.",
     icon: <FaUserShield size={40} className="text-red-600" />,
   },
   {
-    title: "Delete ECR Passport",
-    description: "Remove ECR status from your passport for eligible candidates with our expert guidance.",
+    title: "Delete ECR Status from Passport Mumbai",
+    description: "Remove the Emigration Check Required (ECR) status with our professional assistance, ensuring eligibility and smooth processing for Mumbai applicants.",
     icon: <FaGlobe size={40} className="text-red-600" />,
   },
   {
-    title: "PPC",
-    description: "Get your Police Clearance Certificate (PPC) for international travel, with guidance through every step.",
+    title: "Police Clearance Certificate (PPC) Mumbai",
+    description: "Get your Police Clearance Certificate for international travel or visa purposes with step-by-step assistance and timely processing in Mumbai.",
     icon: <FaCheckCircle size={40} className="text-red-600" />,
   },
 ];
@@ -105,7 +105,7 @@ const OurService = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-6">Our Services</h2>
           <p className="text-center text-gray-600 mb-10">
-            We provide a full range of passport-related services. Choose the one that suits your needs and let us assist you efficiently.
+            We offer a full spectrum of passport services in Mumbai designed for speed and accuracy. Whether you need a fresh passport, Tatkaal passport in Mumbai, or passport renewal, our expert team ensures smooth processing with minimal delays.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
