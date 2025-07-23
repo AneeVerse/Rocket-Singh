@@ -22,41 +22,43 @@ const AboutUs = () => {
               alt="About Us"
               width={500}
               height={600}
-              className="w-full h-[350px] sm:h-[400px] lg:h-[600px] object-cover rounded-lg shadow-lg lg:max-h-full"
+              className="w-full h-[350px] sm:h-[400px] lg:h-[590px] object-cover rounded-lg shadow-lg lg:max-h-full"
             />
           </motion.div>
 
           {/* Right Text Section */}
           <div className="w-full lg:w-1/2 lg:h-[600px] space-y-2 text-center lg:text-left flex flex-col justify-center lg:justify-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800">About Us – Trusted Urgent Passport Services in Mumbai</h2>
-            <p className="text-gray-600 text-left text-base md:text-lg leading-relaxed">
-              At <span className="text-red-600">Rocket Singh Enterprises</span>, we specialize in providing fast, reliable, and hassle-free Tatkaal passport services in Mumbai. Whether you need a new passport, passport renewal, or urgent assistance with a lost or damaged passport, our expert team is here to guide you through every step.
-            </p>
-            <p className="text-gray-600 text-left text-base md:text-lg leading-relaxed">
-              With years of experience serving clients across Mumbai—including Nerul, Seawoods, Andheri, and beyond—we understand local requirements and timelines inside out. Our mission is to help you get your passport processed quickly and smoothly, so you can focus on your travel plans without worry.
-            </p>
+            <div className="space-y-4">
+              <p className="text-gray-600 text-left text-[0.98rem] md:text-[1.08rem] leading-relaxed mb-4">
+                At <span className="text-red-600">Rocket Singh Enterprises</span>, we specialize in providing fast, reliable, and hassle-free Tatkaal passport services in Mumbai. Whether you need a new passport, passport renewal, or urgent assistance with a lost or damaged passport, our expert team is here to guide you through every step.
+              </p>
+              <p className="text-gray-600 text-left text-[0.98rem] md:text-[1.08rem] leading-relaxed mb-4">
+                With years of experience serving clients across Mumbai including Nerul, Seawoods, Andheri, and beyond, we understand local requirements and timelines inside out. Our mission is to help you get your passport processed quickly and smoothly, so you can focus on your travel plans without worry.
+              </p>
+            </div>
 
             {/* Key Benefits List */}
-            <ul className="space-y-2">
-              <li className="flex items-start">
+            <ul className="space-y-2 ">
+              <li className="flex items-start mt-4">
                 <FaCheckCircle className="text-red-600 mr-2 mt-0.5" size={20} />
-                <span className="text-gray-700 text-left text-base md:text-lg">Quick turnaround for Tatkal passport applications in Mumbai</span>
+                <span className="text-gray-700 text-left text-[0.98rem] md:text-[1.08rem]">Quick turnaround for Tatkal passport applications in Mumbai</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-red-600 mr-2 mt-0.5" size={20} />
-                <span className="text-gray-700 text-left text-base md:text-lg">Personalized support tailored to your unique situation</span>
+                <span className="text-gray-700 text-left text-[0.98rem] md:text-[1.08rem]">Personalized support tailored to your unique situation</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-red-600 mr-2 mt-0.5" size={20} />
-                <span className="text-gray-700 text-left text-base md:text-lg">Complete assistance with document preparation and appointment booking</span>
+                <span className="text-gray-700 text-left text-[0.98rem] md:text-[1.08rem]">Complete assistance with document preparation and appointment booking</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-red-600 mr-2 mt-0.5" size={20} />
-                <span className="text-gray-700 text-left text-base md:text-lg">Transparent process with regular updates and prompt communication</span>
+                <span className="text-gray-700 text-left text-[0.98rem] md:text-[1.08rem]">Transparent process with regular updates and prompt communication</span>
               </li>
               <li className="flex items-start">
                 <FaCheckCircle className="text-red-600 mr-2 mt-0.5" size={20} />
-                <span className="text-gray-700 text-left text-base md:text-lg">Trusted by hundreds of Mumbai clients for urgent passport needs</span>
+                <span className="text-gray-700 text-left text-[0.98rem] md:text-[1.08rem]">Trusted by hundreds of Mumbai clients for urgent passport needs</span>
               </li>
             </ul>
 
